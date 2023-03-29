@@ -1,1 +1,43 @@
-<h1>bla bla bla </h1>
+<!DOCTYPE html>
+<html lang="en">
+<head> <!-- Head -->
+	<script>
+		window.onload = function() {
+			var loadTime = window.performance.timing.domContentLoadedEventEnd-window.performance.timing.navigationStart;
+			document.getElementById("loadTime").innerHTML = "Ping: " + loadTime + " ms " + "Lütfen Butona basın ↓";
+        };
+
+
+	</script> <!-- Stayle -->
+
+    <style> 
+        button {border: none;}
+        button {border-radius: 10px;}
+        body {background-color: rgb(187, 187, 187);}
+
+
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akvaryum</title>
+</head>
+<body>  <!-- Body -->
+
+<div style="display: flex; justify-content: center; align-items: center;">
+  <h1>Akvaryum kamera</h1>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<iframe src="http://192.168.0.10:4747" width="640" height="610"></iframe>
+</div>
+
+<div style="display: flex; justify-content: center; align-items: center;">
+<p id="loadTime"></p>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
+<button onclick="location.reload()"><h1>Sayfayı Yenile</h1></button>
+</div>
+
+
+</body>
+</html>
